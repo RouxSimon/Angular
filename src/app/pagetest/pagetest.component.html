@@ -1,0 +1,11 @@
+<p>
+  <input [placeholder]="'placehoderChooseCity' | translate" type="text"/>
+  <br/><br/>
+  <select [(ngModel)]="salon" name="salon" id="liste">
+    <option [ngValue]="undefined" selected>Select your option</option> 
+    <option *ngFor="let choix of listeSalons" [value]="choix">{{ choix }}</option>
+  </select>
+  <br/><br/>
+  {{ salon }}
+  <input type="button" value="accueil" [routerLink]="['']">
+</p>
